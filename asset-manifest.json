@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/teact-cats-test/static/css/main.783451c2.css",
+    "main.js": "/teact-cats-test/static/js/main.19b879d7.js",
+    "index.html": "/teact-cats-test/index.html",
+    "main.783451c2.css.map": "/teact-cats-test/static/css/main.783451c2.css.map",
+    "main.19b879d7.js.map": "/teact-cats-test/static/js/main.19b879d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.783451c2.css",
+    "static/js/main.19b879d7.js"
+  ]
+}
