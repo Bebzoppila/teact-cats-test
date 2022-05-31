@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/teact-cats-test/static/css/main.783451c2.css",
-    "main.js": "/teact-cats-test/static/js/main.ea3dd6d2.js",
+    "main.css": "/teact-cats-test/static/css/main.2d9f3aaf.css",
+    "main.js": "/teact-cats-test/static/js/main.2898645a.js",
     "index.html": "/teact-cats-test/index.html",
-    "main.783451c2.css.map": "/teact-cats-test/static/css/main.783451c2.css.map",
-    "main.ea3dd6d2.js.map": "/teact-cats-test/static/js/main.ea3dd6d2.js.map"
+    "main.2d9f3aaf.css.map": "/teact-cats-test/static/css/main.2d9f3aaf.css.map",
+    "main.2898645a.js.map": "/teact-cats-test/static/js/main.2898645a.js.map"
   },
   "entrypoints": [
-    "static/css/main.783451c2.css",
-    "static/js/main.ea3dd6d2.js"
+    "static/css/main.2d9f3aaf.css",
+    "static/js/main.2898645a.js"
   ]
 }
