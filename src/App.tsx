@@ -16,7 +16,8 @@ function App() {
   }));
 
   return (
-    <BrowserRouter basename="teact-cats-test">
+    // basename="teact-cats-test"
+    <BrowserRouter >
       <Header links={links} />
       <Routes>
         {pages.map((page) => (

@@ -1,21 +1,27 @@
-import { FC } from "react"
-import { CatItem as CatItemType } from '../store/slices/cats'
+import { FC } from "react";
+import { CatItem as CatItemType } from "../store/slices/cats";
 import CatItem from "../components/CatItem";
-
+import Loader from "./Loader";
 type CatsProps = {
-    catsData: CatItemType[],
-    onCatClick: (id: number, url: string) => void
-}
+  catsData: CatItemType[];
+  onCatClick: (id: string, url: string) => void;
+  loader?: boolean
+};
 
-const Cats:FC<CatsProps> = ({catsData, onCatClick}) => {
+const Cats: FC<CatsProps> = ({ catsData, onCatClick, loader = true }) => {
+  return (
+    <div className="cats">
+      {(!catsData.length && loader)? <Loader /> : ''}
 
-    return(
-        <div className="cats">
-            {catsData.map((cat) => (
-              <CatItem onCatClick={() => onCatClick(cat.id, cat.url)} id={cat.id} url={cat.url} />
-            ))}
-        </div>
-    )
-}
+      {catsData.map((cat) => (
+        <CatItem
+          onCatClick={() => onCatClick(cat.id, cat.url)}
+          id={cat.id}
+          url={cat.url}
+        />
+      ))}
+    </div>
+  );
+};
 
-export default Cats
+export default Cats;

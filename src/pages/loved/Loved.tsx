@@ -3,10 +3,10 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import Cats from "../../components/Cats";
 import { deleteLikedCats } from '../../store/slices/cats'
 const Loved = () => {
-    const likedCats = useAppSelector(state => state.cats.likedCats)
+    const likedCats = useAppSelector(state => state.cats.allCats.filter(cat => state.cats.likedCats.includes(cat.id)) )
     const dispatcher = useAppDispatch();
 
-    function deleteCat(id: number, url: string){
+    function deleteCat(id: string,){
         dispatcher(deleteLikedCats(id))
     }
 
@@ -14,7 +14,7 @@ const Loved = () => {
         <div className="loved">
             <div className="container">
                 <div className="loved__inner">
-                    <Cats  onCatClick={deleteCat} catsData={likedCats} />
+                    <Cats loader={false} onCatClick={deleteCat} catsData={likedCats} />
                 </div>
             </div>
         </div>

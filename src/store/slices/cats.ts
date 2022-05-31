@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 export type CatItem = {
   url: string;
-  id: number;
+  id: string;
 };
 
 type CatsState = {
   allCats: CatItem[];
-  likedCats: CatItem[];
+  likedCats: string[];
 };
 const initialState: CatsState = {
   allCats: [],
@@ -36,15 +36,15 @@ export const catsSlice = createSlice({
   initialState,
 
   reducers: {
-    addLikedCats: (state, action: PayloadAction<CatItem>) => {
+    addLikedCats: (state, action: PayloadAction<string>) => {
       state.likedCats.push(action.payload);
     },
 
-    deleteLikedCats: (state, action: PayloadAction<number>) => {
+    deleteLikedCats: (state, action: PayloadAction<string>) => {
       console.log(state, action.payload);
       
       state.likedCats = state.likedCats.filter(
-        (cat) => cat.id !== action.payload
+        (id) => id !== action.payload
       );
     },
   },

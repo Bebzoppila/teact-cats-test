@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./main.sass";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { upoadSomeCats } from "../../store/slices/cats";
 import { addLikedCats } from '../../store/slices/cats'
@@ -16,8 +15,8 @@ const Main = () => {
     
   }, []);
 
-  function addCats(id: number, url: string){
-    dispatcher(addLikedCats({id, url}))
+  function addCats(id: string, url: string){
+    dispatcher(addLikedCats(id))
   }
 
   return (

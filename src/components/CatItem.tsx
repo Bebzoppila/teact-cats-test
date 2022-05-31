@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 type CatItemProps = {
-    id: number,
+    id: string,
     url: string,
     onCatClick: () => void
 }
@@ -9,7 +9,7 @@ const CatItem:FC<CatItemProps> = ({url, onCatClick}) => {
 
   return (
     <article className="cats__item">
-      <img src={url} alt="Картинка" />
+      <img className="cats__item-photo" src={url} alt="Картинка" />
       <div onClick={() => onCatClick()} role="button" className="cats__item-love">
         <svg
           className="cats__item-img"

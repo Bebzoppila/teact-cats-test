@@ -1,4 +1,3 @@
-import "./style.sass";
 import { FC } from "react";
 import NavItem from "./NavItem";
 
